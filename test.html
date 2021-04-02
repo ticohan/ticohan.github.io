@@ -1,7 +1,38 @@
-<!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World! Hi!</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://unpkg.com/d3-array@1"></script>
+    <script src="https://unpkg.com/d3-collection@1"></script>
+    <script src="https://unpkg.com/d3-path@1"></script>
+    <script src="https://unpkg.com/d3-shape@1"></script>
+    <script src="https://unpkg.com/d3-sankey@0"></script>
+    <script>
+
+var sankey = d3.sankey();
+
+</script>
+  </head>
+  <body>
+    <h1>6.859: D3 basics pt2</h1>
+
+    <div id="chart" style="width:420px;height:420px;">
+      <!-- This is where we will put our chart. -->
+    </div>
+
+    <script>
+      const color = d3.scaleOrdinal(["G", "Leave"], ["#da4f81", "#5ac5c4"]).unknown("#ccc");
+      const data = d3.csv("brexit.csv", function(data) {console.log(data);
+                    // for (var i = 0; i < data.length; i++) {
+                    //     console.log(data[i].Name);
+                    //     console.log(data[i].Age);
+                    // }
+                });
+      //console.log(data);
+      //document.getElementById("chart").appendChild(svg.node());s
+    </script>
+  </body>
+
+  <!-- This adapted from Arvind's observable from lecture. https://observablehq.com/d/4c93c3a516d35624 -->
+  <!-- Great D3 intro resource: https://observablehq.com/@d3/learn-d3?collection=@d3/learn-d3 -->
 </html>
